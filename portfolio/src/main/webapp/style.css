@@ -29,14 +29,10 @@ cursive {
 
 div.gallery {
   margin: 12px;
-  border: 2px solid rgb(255, 255, 255);
+  border: 3px solid rgb(255, 255, 255);
   float: left;
   width: 200px;
   height: 180px;
-}
-
-div.gallery:hover {
-  border: 2px solid rgb(255, 255, 255);
 }
 
 div.gallery img {
