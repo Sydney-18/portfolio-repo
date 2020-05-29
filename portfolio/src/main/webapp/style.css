@@ -9,7 +9,7 @@ intro-title {
 }
 
 greeting-button {
-  background-color: rgb(195, 121, 255);
+  background-color: rgb(151, 91, 201);
   border: none;
   color: white;
   padding: 15px ;
@@ -29,7 +29,7 @@ cursive {
 
 div.gallery {
   margin: 12px;
-  border: 2px solid rgb(195, 121, 255);
+  border: 2px solid rgb(255, 255, 255);
   float: left;
   width: 200px;
   height: 180px;
