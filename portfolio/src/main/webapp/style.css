@@ -24,5 +24,29 @@ cursive {
 
 #greeting-container {
   margin-top: 30px;
-  font-size: 30px;
+  font-size: 25px;
+}
+
+div.gallery {
+  margin: 15px;
+  border: 2px solid rgb(195, 121, 255);
+  float: left;
+  width: 200px;
+  height: 180px;
+}
+
+div.gallery:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 2px;
+  text-align: center;
+  font-family: cursive;
+  font-size: 12px;
 }
