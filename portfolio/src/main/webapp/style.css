@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(240, 223, 255);
+  background-color: #f0dfff;
 }
 
 #content {
@@ -9,7 +9,7 @@ body {
 }
 
 greeting-button {
-  background-color: rgb(173, 122, 214);
+  background-color: #ad7ad6;
   border: none;
   border-radius: 50px;
   color: white;
@@ -39,12 +39,13 @@ h1 {
   margin-bottom: 50px;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-family: cursive;
 }
 
 .gallery {
-  border: 3px solid rgb(255, 255, 255);
+  border: 3px solid white;
   float: left;
   height: 180px;
   margin: 12px;
@@ -73,9 +74,8 @@ media-title {
 
 .fa {
   border-radius: 50%;
-  cursor: pointer;
   font-size: 30px;
-  margin-bottom:150px;
+  margin-bottom: 150px;
   margin-right: 12px;
   padding: 20px;
   text-align: center;
@@ -93,7 +93,7 @@ media-title {
 }
 
 .fa-instagram {
-  background: rgb(226, 97, 194);
+  background: #e261c2;
   color: white;
 }
 
