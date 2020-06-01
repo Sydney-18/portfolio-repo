@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(236, 212, 255);
+  background-color: rgb(240, 223, 255);
 }
 
 #content {
@@ -38,11 +38,7 @@ h1 {
   margin-bottom: 50px;
 }
 
-h2 {
-  font-family: cursive;
-}
-
-h3 {
+h2, h3 {
   font-family: cursive;
 }
 
