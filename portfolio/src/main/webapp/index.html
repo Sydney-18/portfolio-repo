@@ -12,7 +12,7 @@
     <div id="content">
       <h1><em>Hello</em>, my name is Sydney!</h1>
     
-      <greeting-button onclick="addRandomGreeting()">Click for Inspiration</greeting-button>
+      <greeting-button onclick="addRandomQuote()">Click for Inspiration</greeting-button>
       <div id="greeting-container"></div>
 
       <h2>About Me</h2>
@@ -109,6 +109,10 @@
       <a href="https://www.twitter.com/sydney_beas" class="fa fa-twitter"></a>
       <a href="https://www.facebook.com/sydney.beas" class="fa fa-facebook"></a>
       <a href="https://www.snapchat.com/add/syd7892" class="fa fa-snapchat-ghost"></a>
+      <div>
+        <button onclick="getGreetingUsingAsyncAwait()">Hello</button>
+        <div id="data-holder"></div>
+      </div>
     </div>
   </body>
 </html>

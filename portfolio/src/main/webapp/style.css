@@ -14,7 +14,6 @@ greeting-button {
   border-radius: 50px;
   color: white;
   cursor: pointer;
-  font-family: cursive;
   font-size: 15px;
   margin-bottom: 15px;
   margin-top: 20px;
@@ -23,6 +22,13 @@ greeting-button {
 }
 
 #greeting-container {
+  color: black;
+  font-size: 25px;
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+
+#data-holder {
   color: black;
   font-size: 25px;
   margin-bottom: 50px;
