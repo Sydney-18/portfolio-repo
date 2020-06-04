@@ -36,13 +36,6 @@ public class DataServlet extends HttpServlet {
     String jsonComments = gson.toJson(comments);
     response.setContentType("text/html;");
     response.getWriter().println(jsonComments);
-    
-    /*final Gson gson = new Gson();
-    ArrayList<String> comments = new ArrayList<>();
-
-    comments.add("Great Job!");
-    comments.add("Keep up the good work!");
-    comments.add("Awesome!"); */
   }
 
   @Override
@@ -53,9 +46,6 @@ public class DataServlet extends HttpServlet {
 
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {
     String value = request.getParameter(name);
-    if (value == null) {
-      return defaultValue;
-    }
-    return value;
+    return value == null ? defaultValue : value;
   }
 }

@@ -31,7 +31,7 @@ function addRandomQuote() {
   greetingContainer.innerText = greeting;
 }  
 
-  // Hello Sydney function
+// Greeting function
 async function getGreetingUsingAsyncAwait() {
   const response = await fetch('/data');
   const greeting  = await response.text();
