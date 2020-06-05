@@ -8,6 +8,11 @@ body {
   width: 650px;
 }
 
+textarea {
+  height: 70px;
+  width: 400px; 
+}
+
 greeting-button {
   background-color: #ad7ad6;
   border: none;
@@ -81,7 +86,7 @@ media-title {
 .fa {
   border-radius: 50%;
   font-size: 30px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   margin-right: 12px;
   padding: 20px;
   text-align: center;

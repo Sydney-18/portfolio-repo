@@ -15,7 +15,7 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
+function addRandomQuote() {
   const greetings =
       ['Act as if what you do makes a difference. It does. - William James', 'Success is not final, failure is not fatal: it is the courage to continue that counts. - Winston Churchhill', 
        'Never bend your head. Always hold it high. Look the world straight in the eye. - Hellen Keller', 'It is our attitude at the beginning of a difficult task which, more than anything else, will affect its successful outcome. - William James',
@@ -29,4 +29,18 @@ function addRandomGreeting() {
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
+}  
+
+// Greeting function
+async function getGreetingUsingAsyncAwait() {
+  const response = await fetch('/data');
+  const greeting = response.text();
+  document.getElementById('data-holder').innerText = greeting;
+}
+
+function getComments() {
+  fetch('/data').then(response => response.json()).then((comments) => {
+    console.log(comments);
+    document.getElementById('comments-container').innerText = comment;
+  });
 }
