@@ -44,7 +44,7 @@ function loadComments() {
     const commentListElement = document.getElementById('comments-container');
     comments.forEach((comments) => {
       commentListElement.appendChild(createCommentElement(comments));
-    })
+    });
   });
 }
 
