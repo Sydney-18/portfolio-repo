@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
   </head>
-  <body onload="getComments()">
+  <body onload="loadComments()">
     <div id="content">
       <h1><em>Hello</em>, my name is Sydney!</h1>
     
@@ -111,12 +111,14 @@
       <a href="https://www.snapchat.com/add/syd7892" class="fa fa-snapchat-ghost"></a>
 
       <div>
-        <h2>Comments</h2>
-        <div id="comments-container"></div>
         <form action="/data" method="POST">
-
-        <p>Leave a message:</p>
-        <textarea name="text-input"></textarea>
+          <p>Leave a message:</p>
+          <textarea name="text-input"></textarea>
+          <div><button type="submit">Submit</button></div>
+        </form>
+        <h3>Comments</h3>
+        <div id="comments-container"></div>
+        
       </div>  
     </div>
   </body>

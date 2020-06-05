@@ -38,9 +38,18 @@ async function getGreetingUsingAsyncAwait() {
   document.getElementById('data-holder').innerText = greeting;
 }
 
-function getComments() {
+// Adds comments to page
+function loadComments() {
   fetch('/data').then(response => response.json()).then((comments) => {
-    console.log(comments);
-    document.getElementById('comments-container').innerText = comment;
+    const commentListElement = document.getElementById('comments-container');
+    comments.forEach((comments) => {
+      commentListElement.appendChild(createCommentElement(comments));
+    });
   });
+}
+
+function createCommentElement(comment) {
+  const commentElement = document.createElement('li');
+  commentElement.innerText = comment
+  return commentElement;
 }
