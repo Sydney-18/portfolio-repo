@@ -34,7 +34,7 @@ function addRandomQuote() {
 // Greeting function
 async function getGreetingUsingAsyncAwait() {
   const response = await fetch('/data');
-  const greeting  = await response.text();
+  const greeting = response.text();
   document.getElementById('data-holder').innerText = greeting;
 }
 
