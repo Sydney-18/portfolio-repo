@@ -16,7 +16,6 @@ textarea {
 greeting-button {
   background-color: #ad7ad6;
   border: none;
-  border-radius: 50px;
   color: white;
   cursor: pointer;
   font-size: 15px;
@@ -38,6 +37,39 @@ greeting-button {
   font-size: 25px;
   margin-bottom: 50px;
   margin-top: 40px;
+}
+
+button {
+  background-color: #ad7ad6;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+#comments-container {
+  border-color: black;
+  border-radius: 1px;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 60px;
+  padding: 10px;
+}
+
+li {
+  background-color: white;
+  padding: 10px;
+}
+
+input:hover {
+  opacity: 0.7;
 }
 
 hr {
