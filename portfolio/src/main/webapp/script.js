@@ -42,14 +42,14 @@ async function getGreetingUsingAsyncAwait() {
 function loadComments() {
   fetch('/data').then(response => response.json()).then((comments) => {
     const commentListElement = document.getElementById('comments-container');
-    comments.forEach((comments) => {
-      commentListElement.appendChild(createCommentElement(comments));
+    comments.forEach((comment) => {
+      commentListElement.appendChild(createCommentElement(comment.name, comment.message, comment.time));
     });
   });
 }
 
-function createCommentElement(comment) {
+function createCommentElement(name, message, time) {
   const commentElement = document.createElement('li');
-  commentElement.innerText = comment
+  commentElement.innerText = name + ' posted ' + message + ' on ' + time;
   return commentElement;
 }
