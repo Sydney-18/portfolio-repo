@@ -43,11 +43,17 @@ function loadComments() {
   fetch('/data').then(response => response.json()).then((comments) => {
     const commentListElement = document.getElementById('comments-container');
     comments.forEach((comment) => {
-      commentListElement.appendChild(createCommentElement(comment.name, comment.message, comment.time));
+      commentListElement.appendChild(createCommentElement(comment.name,
+        comment.message, comment.time));
     });
   });
 }
 
+/**
+ * @param {string} name The name of the user who commented.
+ * @param {string} message The message body of a comment post.
+ * @param {string} time The time of a comment post.
+ */
 function createCommentElement(name, message, time) {
   const commentElement = document.createElement('li');
   commentElement.innerText = name + ' posted ' + message + ' on ' + time;

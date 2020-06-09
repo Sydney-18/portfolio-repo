@@ -20,6 +20,7 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Query.SortDirection;
+import com.google.appengine.api.datastore.FetchOptions;
 import com.google.gson.Gson;
 import com.google.sps.data.Comment;
 import java.io.IOException;
@@ -44,10 +45,10 @@ public class DataServlet extends HttpServlet {
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     PreparedQuery results = datastore.prepare(query);
 
-    int count = 0;
-    ArrayList<Comment> comments = new ArrayList<Comment>();
+    ArrayList<Comment> comments = new ArrayList<Comment>(); 
 
-    for(Entity entity : results.asIterable()) {
+    // limit 10 comments
+    for(Entity entity : results.asIterable(FetchOptions.Builder.withLimit(10))) {
       String name = (String) entity.getProperty(Comment.NAME_KEY);
       String message = (String) entity.getProperty(Comment.MESSAGE_KEY);
       long timestamp = (long) entity.getProperty(Comment.TIMESTAMP_KEY);
@@ -55,9 +56,6 @@ public class DataServlet extends HttpServlet {
 
       Comment comment = new Comment(name, message, timestamp, time);
       comments.add(comment); 
-      count ++;
-      if (count == 100);
-        break;
     }
 
     final Gson gson = new Gson();
@@ -73,7 +71,7 @@ public class DataServlet extends HttpServlet {
     long timestamp = System.currentTimeMillis();
 
     Date date = new Date(timestamp);
-    SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+    final SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
     String time = dateFormat.format(date);
 
     Entity commentEntity = new Entity(Comment.MESSAGE_KEY);
@@ -85,9 +83,6 @@ public class DataServlet extends HttpServlet {
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     datastore.put(commentEntity);
 
-    //comments.add(comment);
-    //response.setContentType("text/html;");
-    //response.getWriter().println(comments);
     response.sendRedirect("/index.html");
   }
 
