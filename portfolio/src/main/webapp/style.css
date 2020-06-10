@@ -8,6 +8,12 @@ body {
   width: 650px;
 }
 
+input {
+  height: 25px;
+  margin-bottom: 8px;
+  width: 402px; 
+}
+
 textarea {
   height: 70px;
   width: 400px; 
