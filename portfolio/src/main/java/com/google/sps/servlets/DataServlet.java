@@ -36,6 +36,8 @@ import javax.servlet.http.HttpServletResponse;
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
+
+  private static final SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
   
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -71,7 +73,6 @@ public class DataServlet extends HttpServlet {
     long timestamp = System.currentTimeMillis();
 
     Date date = new Date(timestamp);
-    final SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
     String time = dateFormat.format(date);
 
     Entity commentEntity = new Entity(Comment.MESSAGE_KEY);
