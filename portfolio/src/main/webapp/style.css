@@ -121,6 +121,13 @@ media-title {
   margin-top: 10px;
 } 
 
+#map {
+  border: 2px solid white;
+  height: 350px;
+  margin-bottom: 50px;
+  width: 400px;
+}
+
 .fa {
   border-radius: 50%;
   font-size: 30px;
