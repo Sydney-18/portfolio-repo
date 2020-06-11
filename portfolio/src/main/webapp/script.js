@@ -61,10 +61,7 @@ function createCommentElement(name, message, time) {
 }
 
 // Creates a map and adds it to the page
-var map;
 function createMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 33.497, lng: -82.024 },
-    zoom: 10
-  });
+  const map = new google.maps.Map(document.getElementById('map'),
+    {center: { lat: 33.497, lng: -82.024 }, zoom: 10});
 }
