@@ -59,3 +59,9 @@ function createCommentElement(name, message, time) {
   commentElement.innerText = name + ' posted ' + message + ' on ' + time;
   return commentElement;
 }
+
+// Creates a map and adds it to the page
+function createMap() {
+  const map = new google.maps.Map(document.getElementById('map'),
+    {center: { lat: 33.497, lng: -82.024 }, zoom: 10});
+}

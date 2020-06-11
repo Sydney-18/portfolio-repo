@@ -6,9 +6,10 @@
     <title>Sydney Beasley Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_WLXfgBcN3n6ePBixMezUK6PQLeBLA84"></script>
     <script src="script.js"></script>
   </head>
-  <body onload="loadComments()">
+  <body onload="createMap(); loadComments()">
     <div id="content">
       <h1><em>Hello</em>, my name is Sydney!</h1>
     
@@ -102,6 +103,11 @@
       <h3>My Hidden Talent</h3>
       <p>Although I write with my left hand, I am actually ambidextrous. I do many activities with both hands and can even write with both hands (not very well, but it's legible)!</p>
       <hr>
+
+      <h2>Augusta, Georgia</h2>
+      <p>Take a look around my hometown!</p>
+      <div id="map"></div> 
+
       <h2>Social Media</h2>
       <!-- Social icons populated by CSS. -->  
       <a href="https://www.linkedin.com/in/sydney-beasley-6b04b8168" class="fa fa-linkedin"></a>
